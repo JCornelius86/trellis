@@ -27,9 +27,15 @@ Phase 1 (Clarify) is approved. See `project/` for the brief, assumptions, decisi
 | --- | --- |
 | 1. Clarify | Approved 2026-11-09 |
 | 2. Prepare the Figma template | Next |
-| 3. Design the smallest complete journey | Not started |
+| 3. Design the smallest complete journey | Approved 2026-11-09 (wireframes and hi-fi) |
 | 4. Implement one vertical slice | Not started |
 | 5. Verify and share | Not started |
+
+## Design
+
+The approved first-run journey and visual direction are documented in `docs/design/`:
+- `docs/design/README.md` lists every approved screen, what it's for, and the decision that approved it.
+- `docs/design/tokens.md` holds the Blueprint colors, type, and shapes.
 
 ## Planned structure
 

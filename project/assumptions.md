@@ -15,8 +15,4 @@ GitHub and Figma OAuth apps redirect to the local service on localhost. Tokens s
 Date: 2026-11-09 · Owner: @you · Status: open
 No shared server. "Shared activity" means what GitHub and Figma already record.
 
-## A5 · No AI inside Trellis in v1
-Date: 2026-11-09 · Owner: @you · Status: open
-AI summaries in Activity come from Copilot's PR descriptions and are labelled as such.
-
-Note: A1 (hand-off via issue assignment) was confirmed and moved to D3.
+Note: A1 (hand-off via issue assignment) was confirmed and moved to D3. A5 (no AI inside Trellis in v1) was confirmed and moved to D8.

@@ -4,6 +4,8 @@
 | --- | --- |
 | Trellis | The local hub. A starting point and project view, not a workflow. |
 | Project | One GitHub repo plus one Figma file. |
+| Flow | One Figma section moving through Wireframes, Explorations, and Current. The main unit in Trellis. |
+| Round | One prompt-and-design iteration within a flow. Trellis starts it; follow-ups happen in Copilot and Figma. |
 | Context | The brief, assumptions, decisions, and glossary files in `project/`. |
 | Scope | An optional Figma frame or section the task applies to. |
 | Prepared task | Goal, scope, and context assembled into instructions for Copilot. |
