@@ -26,9 +26,9 @@ Phase 1 (Clarify) is approved. See `project/` for the brief, assumptions, decisi
 | Phase | Status |
 | --- | --- |
 | 1. Clarify | Approved 2026-11-09 |
-| 2. Prepare the Figma template | Next |
+| 2. Prepare the Figma template | Done 2026-11-09 (D15) |
 | 3. Design the smallest complete journey | Approved 2026-11-09 (wireframes and hi-fi) |
-| 4. Implement one vertical slice | Not started |
+| 4. Implement one vertical slice | Next |
 | 5. Verify and share | Not started |
 
 ## Design
@@ -36,6 +36,7 @@ Phase 1 (Clarify) is approved. See `project/` for the brief, assumptions, decisi
 The approved first-run journey and visual direction are documented in `docs/design/`:
 - `docs/design/README.md` lists every approved screen, what it's for, and the decision that approved it.
 - `docs/design/tokens.md` holds the Blueprint colors, type, and shapes.
+- The approved screens are on the Current page of the [Trellis Figma file](https://www.figma.com/design/cLDDk36CONL4cSVnv98HEF). New projects start from the [project template](https://www.figma.com/design/0tOmTAAP3wA3I90KdJK3A9); see `docs/figma-template.md`.
 
 ## Planned structure
 

@@ -61,6 +61,13 @@ Date: 2026-11-09 · Owner: @you · Status: approved
 Approved hi-fi screens in the Blueprint direction (D13): project overview, welcome, new-task composer, hand-off success, hand-off recovery, flow detail, and flow detail with nothing new. These are eligible for Current in Figma and for implementation in Phase 4.
 Source: Trellis Hi-fi Explorations, turns 2–4. Inventory in docs/design/README.md.
 
+## D15 · Figma template and project file
+Date: 2026-11-09 · Owner: @you · Status: approved
+The template file stays blank and reusable: 10 fixed pages, a Read me to fill in, and a one-line description on every other page (docs/figma-template.md). Each project gets its own copy. Trellis's own copy holds the D14 screens on Current as one section, `First-run journey · 2026-11-09`, with Blueprint colors as local variables and a prototype starting at Welcome.
+Why: the template's starting state has no example screens, so Trellis's designs can't live in it.
+Gaps (unlinked controls with no real destination yet) are listed on the project file's Questions & issues page.
+Template: https://www.figma.com/design/0tOmTAAP3wA3I90KdJK3A9 · Project file: https://www.figma.com/design/cLDDk36CONL4cSVnv98HEF
+
 ## D7 · Name
 Date: 2026-11-09 · Owner: @you · Status: approved
 Trellis. Throughline and Plumb were rejected: both are used by existing design-to-code tools.
