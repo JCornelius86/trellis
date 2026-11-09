@@ -8,7 +8,7 @@ How the first-run journey was designed, in order. Each step was reviewed before 
 Who does what across Trellis, GitHub (including Copilot), and Figma. Each fidelity (lo-fi, hi-fi) is a loop between prompting and design; the team promotes work when it's ready. Testing feeds the next iteration.
 
 ## 2. Wireframes (lo-fi)
-Four rounds, approved in D12.
+Four rounds, approved in D12. All four are on the Wireframes page of the Trellis Figma file as sections `First-run journey · 2026-11-09 · round N`, with approved options badged.
 
 | Round | Explored | Outcome |
 | --- | --- | --- |

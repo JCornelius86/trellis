@@ -68,6 +68,11 @@ Why: the template's starting state has no example screens, so Trellis's designs 
 Gaps (unlinked controls with no real destination yet) are listed on the project file's Questions & issues page.
 Template: https://www.figma.com/design/0tOmTAAP3wA3I90KdJK3A9 · Project file: https://www.figma.com/design/cLDDk36CONL4cSVnv98HEF
 
+## D16 · Template pages: icons, groups, About page
+Date: 2026-11-09 · Owner: @you · Status: approved
+Page names carry a leading icon, and `---` divider pages split the panel into five groups (Start here, Coordinate, System, Fidelity, Keep). A new first page, About Trellis, explains the template with the prompt-and-design flowchart and an animated fidelity loop. Trellis matches page names after the icon and skips dividers. Sections may add ` · round N` when a flow has several rounds on one date.
+Why: the page list is the first thing a teammate sees; grouping makes the fidelity pipeline readable at a glance. The naming rule changes before any code reads it, so nothing breaks.
+
 ## D7 · Name
 Date: 2026-11-09 · Owner: @you · Status: approved
 Trellis. Throughline and Plumb were rejected: both are used by existing design-to-code tools.
