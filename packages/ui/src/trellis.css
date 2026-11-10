@@ -1,0 +1,373 @@
+/*
+ * Trellis components, in the Blueprint direction (decision D13).
+ * Tokens match docs/design/tokens.md. Change a value there and here together.
+ */
+
+:root {
+  --bg: oklch(0.25 0.065 255);
+  --grid: oklch(0.31 0.065 255);
+  --side: oklch(0.22 0.06 255);
+  --surface: oklch(0.285 0.068 255);
+  --surface-2: oklch(0.33 0.07 255);
+  --line: oklch(0.4 0.065 255);
+  --ink: oklch(0.97 0.008 250);
+  --muted: oklch(0.78 0.035 250);
+  --accent: oklch(0.82 0.11 215);
+  --accent-ink: oklch(0.22 0.06 255);
+  --accent-soft: oklch(0.36 0.08 230);
+  --accent-soft-ink: oklch(0.88 0.08 215);
+  --attention: oklch(0.4 0.075 80);
+  --attention-ink: oklch(0.93 0.09 88);
+  --agreed: oklch(0.37 0.07 165);
+  --agreed-ink: oklch(0.9 0.09 165);
+  --warning: oklch(0.38 0.09 20);
+  --warning-ink: oklch(0.9 0.07 25);
+
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --r-card: 10px;
+  --r-control: 8px;
+  --r-tag: 4px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  /* The fine line grid, 28px apart. */
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--accent-soft-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.t-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.t-icon {
+  flex: none;
+  vertical-align: -0.15em;
+}
+
+/* Label: mono, uppercase, tracked */
+.t-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+}
+.t-label--accent {
+  color: var(--accent-soft-ink);
+}
+.t-label--agreed {
+  color: var(--agreed-ink);
+}
+.t-label--attention {
+  color: var(--attention-ink);
+}
+
+/* Logo mark */
+.t-logo {
+  display: inline-block;
+  flex: none;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+}
+
+/* Buttons */
+.t-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--r-control);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 120ms var(--ease),
+    border-color 120ms var(--ease),
+    transform 120ms var(--ease);
+}
+.t-btn:hover {
+  text-decoration: none;
+}
+.t-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.t-btn:disabled,
+.t-btn[aria-disabled='true'] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.t-btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.t-btn--primary:hover:not(:disabled) {
+  background: oklch(0.87 0.1 215);
+}
+.t-btn--secondary {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.t-btn--secondary:hover:not(:disabled) {
+  background: var(--surface-2);
+  border-color: var(--muted);
+}
+.t-btn--quiet {
+  background: transparent;
+  color: var(--accent-soft-ink);
+  padding-inline: 8px;
+}
+.t-btn--quiet:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+.t-btn--sm {
+  min-height: 28px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.t-btn--lg {
+  min-height: 44px;
+  padding: 11px 18px;
+  font-size: 14.5px;
+}
+.t-btn--block {
+  width: 100%;
+}
+
+/* Status chips */
+.t-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.t-chip--attention {
+  background: var(--attention);
+  color: var(--attention-ink);
+}
+.t-chip--agreed {
+  background: var(--agreed);
+  color: var(--agreed-ink);
+}
+.t-chip--warning {
+  background: var(--warning);
+  color: var(--warning-ink);
+}
+.t-chip--soft {
+  background: var(--accent-soft);
+  color: var(--accent-soft-ink);
+}
+.t-chip--outline {
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+/* Source tags */
+.t-source {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-tag);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+.t-source--verified {
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.t-source--ai-summary {
+  border: 1px dashed var(--accent);
+  color: var(--accent-soft-ink);
+}
+.t-source--unavailable {
+  color: var(--muted);
+}
+
+/* Avatars */
+.t-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+}
+.t-avatar--22 {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+}
+.t-avatar--26 {
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+}
+.t-avatar--30 {
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+}
+
+/* Cards */
+.t-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+}
+.t-card--side {
+  background: var(--side);
+}
+.t-card--attention {
+  background: var(--attention);
+  border-color: var(--attention);
+  color: var(--attention-ink);
+}
+.t-card--dashed {
+  background: var(--side);
+  border-style: dashed;
+}
+
+/* Schematic flow thumbnails */
+.t-thumb {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 92px;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.t-thumb__bar {
+  width: 45%;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--line);
+}
+.t-thumb__row {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+.t-thumb__row > span {
+  flex: 1;
+  border-radius: 5px;
+}
+.t-thumb--wire .t-thumb__row > span {
+  border: 1.5px dashed var(--line);
+}
+.t-thumb--solid .t-thumb__row > span {
+  background: var(--line);
+}
+.t-thumb--empty .t-thumb__row > span {
+  border: 1.5px dotted var(--line);
+  opacity: 0.6;
+}
+.t-thumb--small {
+  width: 84px;
+  height: 58px;
+  padding: 8px;
+  gap: 5px;
+  flex: none;
+}
+.t-thumb--small .t-thumb__bar {
+  height: 5px;
+  width: 40%;
+}
+.t-thumb--small .t-thumb__row {
+  gap: 4px;
+}
+
+/* People who ask for less motion get none of the decorative kind. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
