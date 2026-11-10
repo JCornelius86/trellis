@@ -73,6 +73,26 @@ Date: 2026-11-09 · Owner: @you · Status: approved
 Page names carry a leading icon, and `---` divider pages split the panel into five groups (Start here, Coordinate, System, Fidelity, Keep). A new first page, About Trellis, explains the template with the prompt-and-design flowchart and an animated fidelity loop. Trellis matches page names after the icon and skips dividers. Sections may add ` · round N` when a flow has several rounds on one date.
 Why: the page list is the first thing a teammate sees; grouping makes the fidelity pipeline readable at a glance. The naming rule changes before any code reads it, so nothing breaks.
 
+## D17 · One project shape, sample data first
+Date: 2026-11-09 · Owner: @you · Status: proposed
+The hub reads one shape of data, a project snapshot (`packages/core/src/types.ts`). The sample projects and the local service both produce it, so every screen works the same with sample data and with real accounts. The demo includes a switch for failures (Copilot not assigned, GitHub down, copy blocked, comments unavailable).
+Why: the journey can be tried, tested, and shared before anyone connects an account, and recovery states stay reachable.
+
+## D18 · Shared state lives in GitHub and Figma
+Date: 2026-11-09 · Owner: @you · Status: proposed
+Trellis keeps no project database. A hand-off writes the task into the issue body with a hidden marker and a `trellis` label. Anyone's Trellis pointed at the same repository and Figma file rebuilds the same tasks, flows, and activity. Only "last visit" and an unsent draft are kept in the browser.
+Why: this is how the work is shared between teammates without a server (A4, D11). A flow started from an idea gets a working name from the first words of the goal until the team names its Figma section.
+
+## D19 · First sign-in: tokens in `.env`
+Date: 2026-11-09 · Owner: @you · Status: proposed
+The first version connects with personal access tokens in a local `.env` file read by the service. OAuth and the OS keychain (A3) come later. The service only answers on localhost, requires a custom header for writes, and never returns or logs a token.
+Why: it works today with one file and no app registration. Changes the order in A3, which stays open.
+
+## D20 · Small screens
+Date: 2026-11-09 · Owner: @you · Status: proposed
+Built mobile-first. Under 960px the side navigation becomes a menu, rails stack under the main column, the hand-off button sticks to the bottom of the screen, and the overview gets a shortcut to "Needs attention".
+Gap: these layouts are not on Current in Figma yet. They need frames and a review before this is approved.
+
 ## D7 · Name
 Date: 2026-11-09 · Owner: @you · Status: approved
 Trellis. Throughline and Plumb were rejected: both are used by existing design-to-code tools.

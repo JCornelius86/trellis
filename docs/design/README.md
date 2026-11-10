@@ -32,6 +32,9 @@ Three light directions, then two dark blueprint directions. Blueprint (2a) chose
 | Flow detail | Timeline with verified, AI summary, and unavailable labels; rule-based next steps | 3a |
 | Flow detail: nothing new | What will appear and when; one nudge if stuck | 3b |
 
+## 5. Implementation
+The screens above are built in `apps/web`. `docs/implementation.md` lists what is implemented, what is proposed, and the gaps, including the small-screen layouts that are not on Current yet (D20).
+
 ## Rules every screen follows
 - Every item shows its source and date. AI-written text is labelled.
 - No empty cards or warnings about optional sources.

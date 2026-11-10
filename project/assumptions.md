@@ -15,4 +15,10 @@ GitHub and Figma OAuth apps redirect to the local service on localhost. Tokens s
 Date: 2026-11-09 · Owner: @you · Status: open
 No shared server. "Shared activity" means what GitHub and Figma already record.
 
+## A6 · Assigning Copilot through the API
+Date: 2026-11-09 · Owner: @you · Status: open
+Trellis assigns Copilot by adding `copilot-swe-agent[bot]` to the issue's assignees through GitHub's REST API, which GitHub documents as a public preview. This is covered by tests against a stand-in for GitHub. It has not been run against a real repository yet. If it fails, the issue is still created and Trellis shows the manual step (D3).
+
+Note: A3 is still open. D19 (proposed) starts with tokens in `.env` and leaves OAuth and the keychain for later.
+
 Note: A1 (hand-off via issue assignment) was confirmed and moved to D3. A5 (no AI inside Trellis in v1) was confirmed and moved to D8.
