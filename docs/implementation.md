@@ -2,7 +2,9 @@
 
 Status: in review · Date: 2026-11-09 · Owner: @you
 
-What Phase 4 built, how it fits together, and what is still missing. Decisions D17–D20 that this relies on are **proposed**, not approved.
+What Phase 4 built, how it fits together, and what is still missing. Decisions D17–D19 that this relies on are **proposed**, not approved.
+
+Under D21 (Figma first) this branch does not merge yet. The parts built without an approved frame are on the Explorations page of the Trellis Figma file, in the sections `Missing states` and `Approval to move to Current`, waiting for approval (D22).
 
 ## What you can do
 
@@ -50,7 +52,7 @@ There is no Trellis server and no Trellis database (D18, proposed). What you han
 | Rule-based next steps (D9), flows from Figma sections (D10, D16), recently active (D11) | Implemented |
 | Sample projects with a failure switch (D5, D17) | Implemented; D17 proposed |
 | Tokens in `.env` (D19) | Implemented; D19 proposed, changes the order in A3 |
-| Small-screen layouts (D20) | Implemented; D20 proposed, no frames on Current yet |
+| Narrow windows | The layout adapts so nothing breaks, but this is a fallback, not a design. Desktop is the product (D20) |
 | Setup screen and the "Nothing was sent" panel | Implemented without an approved design |
 | Flow status "Not assigned", and open questions listed under "Where things stand" | Implemented; small additions to the D9 rules, proposed |
 
@@ -73,5 +75,5 @@ There is no Trellis server and no Trellis database (D18, proposed). What you han
 ## Checks
 
 - `npm test`: rules, sample data, the service against a stand-in for GitHub and Figma, and the journey in the browser (including each failure).
-- Viewed at 390px and 1340px wide with sample data and with the stand-in accounts.
+- Viewed at 1340px wide with sample data and with the stand-in accounts. Also opened at 390px to confirm nothing breaks.
 - Automated accessibility scan (axe) on every screen: no violations. Tab order and reduced motion checked by hand.

@@ -88,10 +88,35 @@ Date: 2026-11-09 · Owner: @you · Status: proposed
 The first version connects with personal access tokens in a local `.env` file read by the service. OAuth and the OS keychain (A3) come later. The service only answers on localhost, requires a custom header for writes, and never returns or logs a token.
 Why: it works today with one file and no app registration. Changes the order in A3, which stays open.
 
-## D20 · Small screens
+## D20 · Desktop first
+Date: 2026-11-09 · Owner: @you · Status: approved
+Trellis is a desktop experience. Small screens are not a priority. A page should not break in a narrow window, but that fallback is not a design: it has no frames on Current and is not reviewed. A specific view gets a phone design only when someone asks for one, and then D21 applies to it.
+Replaces the earlier proposal to build mobile-first. The phone frames drawn on 2026-11-09 stay on Explorations as reference and are not going to Current.
+
+## D21 · Figma first
+Date: 2026-11-09 · Owner: @you · Status: approved
+No screen or distinct state is built in code until its frame is on Current. A pull request links the Current frame for every screen or state it touches. There is no "exceptions" field.
+Exempt: rules, service code, tests, bug or copy fixes to a screen that is already approved, and the narrow-window fallback (D20). Code written only to test whether something is possible lives on an `explore/…` branch and never merges.
+Why: Phase 4 built five things with no approved frame and logged them as gaps. The rule "build only from Current" already existed; the gap list was the loophole.
+
+## D22 · Approval before Current
+Date: 2026-11-09 · Owner: @you · Status: approved
+Work moves to Current only after a person on the team agrees. The request and the approval are recorded on GitHub, so the approver's name and the time are verified, and both show in the hub: the flow reads "Needs approval", it is first under "Needs attention", and the flow page shows who asked, who approved, and when. After approval, an agent or a person may move the frames.
+Changes the template rule "only people promote frames". Hub screens for this are on Explorations and are not approved yet.
+
+## D23 · Nothing is lost when work is promoted
+Date: 2026-11-09 · Owner: @you · Status: approved
+Promoting copies the approved frames to Current. The exploration stays on its page. Any earlier version on Current moves to Archive with its date and a link to what replaced it. Nothing is deleted.
+
+## D24 · Keeping the Figma file fast
 Date: 2026-11-09 · Owner: @you · Status: proposed
-Built mobile-first. Under 960px the side navigation becomes a menu, rails stack under the main column, the hand-off button sticks to the bottom of the screen, and the overview gets a shortcut to "Needs attention".
-Gap: these layouts are not on Current in Figma yet. They need frames and a review before this is approved.
+Keeping every exploration and version (D23) makes the file grow. Proposed: the project file keeps Current plus the two newest rounds of each flow on Wireframes and Explorations. Older rounds and the Archive page move to a separate archive file once a year, or sooner if Figma's memory warning appears. The Archive page keeps a link to that file.
+Also proposed: repeated parts become components, and the line grid becomes one layer per frame. Today the grid is about 45% of all layers on Explorations and Current.
+Open: how Trellis shows history that now lives in another file.
+
+## D25 · Work that amends an agreed flow
+Date: 2026-11-09 · Owner: @you · Status: proposed
+A section may be named for a task (for example `Missing states · 2026-11-09`) when it amends a flow that is already on Current. Trellis lists it as its own item until it is promoted. A flow can be on Current and have a newer round on Wireframes or Explorations at the same time; Trellis shows the Current version as agreed and notes the newer round.
 
 ## D7 · Name
 Date: 2026-11-09 · Owner: @you · Status: approved

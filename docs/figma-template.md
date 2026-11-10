@@ -17,9 +17,9 @@ The pages panel shows each name with a leading icon, and divider pages (named `-
 5. **🧩 Components**: library references, reusable patterns, tokens and states. Flag gaps; don't invent replacements.
 6. **✏️ Wireframes (lo-fi)**: rough flows and alternatives. Never labelled hi-fi.
 7. **🎨 Explorations (hi-fi)**: design-system alternatives. Never built from directly.
-8. **✅ Current**: agreed designs, eligible for implementation. Only people promote frames here.
+8. **✅ Current**: agreed designs, eligible for implementation. Frames arrive here only after a person on the team approves (D22). Once approved, a person or an agent may move them.
 9. **🛠 Working**: existing designer-owned content. Never edited by Copilot.
-10. **🗄 Archive**: superseded work with dates and a link to what replaced it.
+10. **🗄 Archive**: superseded work with dates and a link to what replaced it. Nothing is deleted when work is promoted (D23).
 
 ## Flows and sections
 - One section per flow and round, named `<flow> · YYYY-MM-DD` (date of the round). When a flow has more than one round on the same date, add ` · round N`.

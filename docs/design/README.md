@@ -33,7 +33,7 @@ Three light directions, then two dark blueprint directions. Blueprint (2a) chose
 | Flow detail: nothing new | What will appear and when; one nudge if stuck | 3b |
 
 ## 5. Implementation
-The screens above are built in `apps/web`. `docs/implementation.md` lists what is implemented, what is proposed, and the gaps, including the small-screen layouts that are not on Current yet (D20).
+The screens above are built in `apps/web`. `docs/implementation.md` lists what is implemented, what is proposed, and the gaps. Trellis is designed for desktop (D20).
 
 ## Rules every screen follows
 - Every item shows its source and date. AI-written text is labelled.

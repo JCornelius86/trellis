@@ -28,7 +28,7 @@ Phase 1 (Clarify) is approved. See `project/` for the brief, assumptions, decisi
 | 1. Clarify | Approved 2026-11-09 |
 | 2. Prepare the Figma template | Done 2026-11-09 (D15) |
 | 3. Design the smallest complete journey | Approved 2026-11-09 (wireframes and hi-fi) |
-| 4. Implement one vertical slice | In review on `phase-4/vertical-slice` (D17–D20 proposed) |
+| 4. Implement one vertical slice | In review on `phase-4/vertical-slice` (waiting on Figma approval, D21) |
 | 5. Verify and share | Not started |
 
 ## Design
